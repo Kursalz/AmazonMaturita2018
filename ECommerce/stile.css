@@ -1,0 +1,122 @@
+body{
+    color:black;
+    font-size: 20px;
+    font-family: "Kavoon";
+    background-image: url(/Immagini/background2.png);
+}
+h1{ 
+  color: white;
+  background-color: silver;
+  letter-spacing: .1em;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 42px;
+}
+h2{
+    background-color: silver;
+    margin-top: 40px;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 30px;
+    border-left: 15px solid #404040 ;
+    border-right: 15px solid #404040;
+}
+a, a:visited{
+    text-decoration: none;
+    color:black;
+}
+hr, hr:visited{
+   border-top: 3px double darkgrey;
+}
+
+table{
+    border:2px;
+    padding:8px;
+    border-spacing:40px;
+    margin-left: 20px;
+    table-layout: fixed;
+}
+td{
+    padding: 15px;
+    border:2px solid grey;
+    border-radius: 15px;
+    text-align: center;
+}
+img{
+    border:1px;
+    padding: 5px;
+}
+#nomeProdotto{
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 3px;
+}
+div{
+    margin :15px 0px 15px 0px;
+}
+button{
+    font-family: "Kavoon";
+}
+input, .button, #indietro{
+    padding: 10px;
+    border:2px solid grey;
+    border-radius: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+input[type=text], input[type=password], input[type=number]{
+    font-family: "Kavoon";
+    cursor: text;
+    margin: 10px;
+    padding: 14px;
+}
+#indietro, #conferma{
+    font-size: 26px;
+    background:lightgray;
+    padding: 12px;
+}
+#indietroCarrello, #proseguiAcquisto{
+    border: 2px solid grey;
+    margin-left: 50px;
+    font-size: 26px;
+    background:lightgray;
+    padding: 12px;
+    border-radius: 15px;
+}
+#proseguiAcquisto{
+	margin-left: 560px;
+}
+#btnAccedi, #btnRegistrati, #btnEsci, #btnCarrello{
+    padding: 10px;
+    font-family: "Kavoon";
+    margin-left: 18px;
+    height: 70px;
+    width: auto;
+    font-size: 30px;
+}
+select{
+    background-color: lightgrey;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 7px;
+    font-size: 15px;
+    text-align: center;
+    width: 65px;
+}
+#selectIndirizzo, #selectPagamento  {
+    width: auto;
+    font-size: 22px;
+    height: 55px;
+}
+
+#btnAccedi, #btnEsci{
+    margin-left: 50px;
+}
+#messaggio{
+    margin-left: 50px;
+    font-size: 27px;
+    color: darkgoldenrod;
+    font-weight: bold;
+}
