@@ -3,7 +3,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["login"]) || $_SESSION["login"] == false) {
-    $db = new PDO("sqlite:ecommerce.sqlite");
+    $db = new PDO("sqlite:SitoCommercioElettronico.sqlite");
     if (!$db) {
         die("Errore nell'apertura del database");
     }
@@ -20,12 +20,13 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] == false) {
     $telefono = $_POST["telefono"];
     $credito = random_int(0, 1500);
     if ($password == $password2) {
-        $prepIndirizzo = $db->prepare("INSERT INTO INDIRIZZO(via, numeroCivico, citta, regione) VALUES($indirizzo, $numeroCivico, $citta, $regione)");
-        //$prepIndirizzo->bindParam(":v", $indirizzo, PDO::PARAM_STR);
-        //$prepIndirizzo->bindParam(":n", $numeroCivico, PDO::PARAM_STR);
-        //$prepIndirizzo->bindParam(":c", $citta, PDO::PARAM_STR);
-        //$prepIndirizzo->bindParam(":r", $regione, PDO::PARAM_STR);
-        $prepIndirizzo->execute() or die("<div id='messaggio' style='margin-left:5px;'>Le password non corrispondono.</div>");
+        echo "INSERT INTO INDIRIZZO(via, numeroCivico, citta, regione) VALUES(':v', ':n', ':c', ':r')";
+        $prepIndirizzo = $db->prepare("INSERT INTO INDIRIZZO(via, numeroCivico, citta, regione) VALUES(:v , :n , :c , :r)");
+        $prepIndirizzo->bindParam(":v", $indirizzo, PDO::PARAM_STR);
+        $prepIndirizzo->bindParam(":n", $numeroCivico, PDO::PARAM_STR);
+        $prepIndirizzo->bindParam(":c", $citta, PDO::PARAM_STR);
+        $prepIndirizzo->bindParam(":r", $regione, PDO::PARAM_STR);
+        $prepIndirizzo->execute() or die("<div id='messaggio' style='margin-left:5px;'>Errore nell'inserimento degli indirizzi nel database.</div>");
         $statement = $db->prepare("INSERT INTO CLIENTE(username, password,nome,cognome,numeroTel,idIndirizzo) VALUES ('$username', '$password', '$indirizzo)") or die("Errore nella preparazione del database");
         $statement->execute() or die("<div id='messaggio' style='margin-left:5px;'>Le password non corrispondono.</div>");
         //$row = $statement->fetch();
