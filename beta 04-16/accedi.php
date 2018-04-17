@@ -3,13 +3,12 @@
 
 session_start();
 if ($_SESSION["login"] == false) {
-    $db = new PDO("sqlite:ecommerce.sqlite");
+     $db = new PDO("sqlite:SitoCommercioElettronico.sqlite");
     if (!$db) {
         die("Errore nell'apertura del database");
     }
     $username = $_POST["username"];
     $password = $_POST["password"];
-    echo "<script>alert('$username');</script>";
     $statement = $db->prepare("SELECT nome, password FROM CLIENTE WHERE username = '$username'") or die("Errore nella preparazione del database");
     $statement->execute() or die("Errore nell'accesso al database");
     $row = $statement->fetch();
