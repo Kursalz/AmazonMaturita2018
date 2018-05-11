@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registrati</title>
+        <link rel="stylesheet" type="text/css" href="stile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Kavoon' rel='stylesheet'>
+    </head>
+    <body>
+        <form action="registrati.php" method="post">
+            <a href="index.php"><h1 align='center' class="titolo">Prodotti per l'ufficio | Sito di E - Commerce</h1></a>
+            <a href="index.php" id="indietro">🢢Torna indietro</a><br><br>
+            <label for="username">USERNAME: </label>
+			<input type="text" id="username" name="username" style="display: inline;" placeholder="username" required><br>
+			<label for="password">PASSWORD: </label>
+            <input type="password" id="password" name="password" placeholder="password" style="display: inline" required><br>
+			<label for="password2">RIPETI PASSWORD: </label>
+			<input type="password" id="password2" name="password2" placeholder="ripeti la password: " style="display: inline;" required><br>
+			<label for="nome">NOME: </label>
+			<input type="text" id="nome" name="nome" placeholder="nome" style="display: inline;" required><br>
+			<label for="cognome">COGNOME: </label>
+			<input type="text" id="cognome" name="cognome" placeholder="cognome" style="display: inline;" required><br>
+			<label for="telefono">RECAPITO TELEFONICO: </label>
+			<input type="text" id="telefono" name="telefono" placeholder="telefono" style="display: inline;" ><br>
+			<label for="citta">CITTÀ: </label>
+			<input type="text" id="citta" name="citta" placeholder="città" style="display: inline;" required><br>
+			<label for="provincia">PROVINCIA: </label>
+			<input type="text" id="provincia" name="provincia" placeholder="provincia" style="display: inline;" required><br>
+			<label for="cap">CAP: </label>
+			<input type="text" id="cap" name="cap" placeholder="CAP" style="display: inline;" required><br>
+            <input type="text" id="localita" name="localita" placeholder="Località" style="display: inline;" ><br>
+            <input type="text" id="via" name="via" placeholder="Via" style="display: inline;" ><br>
+            <input type="text" id="civico" name="civico" placeholder="Numero Civico" ><br>
+            <button type="submit" class="button" id="conferma">Conferma <i class="fa fa-check"></i></button>
+        </form>
+    </body>
+</html>
